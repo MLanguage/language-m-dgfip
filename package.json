@@ -1,0 +1,10 @@
+{
+  "name": "language-m-dgfip",
+  "version": "1.0.0",
+  "description": "Syntax highlighting for DGFiP's M language",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "license": "Apache"
+}
