@@ -5,6 +5,13 @@
   "engines": {
     "atom": "*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denismerigoux/language-m-dgfip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denismerigoux/language-m-dgfip/issues"
+  },
   "dependencies": {},
   "license": "Apache"
 }
