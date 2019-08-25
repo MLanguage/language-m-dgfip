@@ -22,18 +22,18 @@
     'name': 'constant.language.m'
   },
   {
-      'match': '\\b[a-zA-Z]\\b'
-      'name': 'keyword..parameter.m'
+      'match': '\\b[a-z]\\b'
+      'name': 'keyword.parameter.m'
   },
   {
     'match': '^\\s*([A-Z_0-9]+)([a-z]*)([A-Z_0-9]*)\\s*='
     'captures':
         '1':
-            'name': 'storage.assignement.m',
+            'name': 'entity.variable.name.m',
         '2':
-            'name': 'keyword..parameter.m',
+            'name': 'keyword.parameter.m',
         '3':
-            'name': 'storage.assignement.m'
+            'name': 'entity.variable.name.m'
   },
   {
       'match': '^\\s*([A-Z_0-9]+)\\s*\\:'
@@ -44,13 +44,8 @@
   {
     'match': '\\b([A-Z_0-9]+)([a-z]*)([A-Z_0-9]*)\\b'
     'captures':
-        '1':
-            'name': 'variable.paramater.m',
         '2':
-            'name': 'keyword.parameter.m',
-        '3':
-            'name': 'variable.paramater.m'
-    'name': 'variable.paramater.m'
+            'name': 'keyword.parameter.m'
   },
   {
     'match': '\\*'
@@ -154,10 +149,6 @@
   },
   {
     'match': 'multimax'
-    'name': 'entity.name.function.m'
-  },
-  {
-    'match': 'present'
     'name': 'entity.name.function.m'
   },
   {
