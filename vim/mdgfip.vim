@@ -7,9 +7,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-"syntax match variableBegin "[A-Za-z0-9_]*" nextgroup=variableMiddle
-"syntax match variableMiddle "[A-Za-z_]" contained nextgroup=variableEnd
-"syntax match variableEnd "[A-Za-z0-9_]*" contained
+syntax match variable "\<[A-Za-z0-9_]*[A-Za-z_][A-Za-z0-9_]*\>"
 
 syntax match structKeywords '\<variable\s\+saisie\>'
 syntax match structKeywords "\<variable\s\+calculee\>"
@@ -76,7 +74,7 @@ hi def link comments Comment
 hi def link strings String
 hi def link numericConstant Number
 "hi def link loopParameter Character
-"hi def link variableMiddle Character
+"hi def link variable Character
 "hi def link assignment Type
 hi def link declaration Type
 
