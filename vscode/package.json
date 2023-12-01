@@ -1,11 +1,11 @@
 {
 	"name": "language-m-dgfip",
 	"displayName": "M DGFiP",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Syntax highlighting for DGFiP's M language",
 	"publisher": "DGFiP",
 	"engines": {
-		"vscode": "^1.80.0"
+		"vscode": "^1.78.0"
 	},
 	"category": [
 		"Programming Languages"
@@ -39,10 +39,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/denismerigoux/language-m-dgfip.git"
+		"url": "https://github.com/MLanguage/language-m-dgfip.git"
 	},
 	"bugs": {
-		"url": "https://github.com/denismerigoux/language-m-dgfip/issues"
+		"url": "https://github.com/MLanguage/language-m-dgfip/issues"
 	},
 	"license": "Apache",
 	"__metadata": {
