@@ -6,9 +6,60 @@
   ],
   "patterns": [
     {
-      "name": "comment.line.m",
-      "begin": "#",
-      "end": "$"
+      "match": "\\bvariable\\s+(saisie|calculee)\\b",
+      "name": "entity.name.type.m"
+    },
+    {
+      "match": "\\bdomaine\\s+(regle|verif)\\b",
+      "name": "entity.name.type.m"
+    },
+    {
+      "match": "\\b(regle|verif|cible)\\b",
+      "name": "entity.name.type.m"
+    },
+    {
+      "match": "\\bcalculer\\s+(domaine|enchaineur|cible)\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\bverifier\\s+domaine\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\:|\\(|\\)|\\,|\\;",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\bvariable\\s+temporaire\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(application|enchaineur|tableau|attribut)\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(specialise|autorise|par_defaut|calculable|verifiable)\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(saisie|calculee|alias|base|restituee|type|fonction|const|sortie)\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(erreur|afficher_erreur|leve_erreur|nettoie_erreurs)\\b",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(si|alors|sinon|finsi|pour|un|iterer|avec|restaurer|apres|categorie)\\b",
+      "name": "keyword.control.m"
+    },
+    {
+      "match": "\\b(erreur|afficher_erreur|leve_erreur|nettoie_erreurs)\\b",
+      "name": "keyword.control.m"
+    },
+    {
+      "match": ":\\s*variable",
+      "name": "keyword.control.m"
     },
     {
       "begin": "\\\"",
@@ -16,187 +67,51 @@
       "name": "string.quoted.double.m"
     },
     {
-      "match": "\\b([0-9]+)\\b",
+      "match": "^\\s*([A-Z_a-z_0-9]+)[A-Z_a-z]([A-Z_a-z_0-9]*)\\s*\\=aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "comment": "deactivated because of conflicts with equality test",
+      "name": "entity.name.type.m"
+    },
+    {
+      "match": "^\\s*([A-Z_a-z_0-9]*)[A-Z]([A-Z_a-z_0-9]*)\\s*\\:",
+      "name": "entity.name.type.m"
+    },
+    {
+      "match": "\\b([0-9]+)(\\(\\.[0-9]+\\))?\\b",
       "name": "constant.numeric.m"
     },
     {
-      "match": "\\bX\\b",
-      "name": "constant.language.m"
+      "match": "\\bindefini\\b",
+      "name": "constant.numeric.m"
     },
     {
-      "match": "\\b[a-z]\\b",
-      "name": "keyword.parameter.m"
+      "match": "\\b(somme|abs|min|max|positif|positif_ou_nul|null|arr|inf|supzero|present)\\b",
+      "name": "entity.name.function.m"
     },
     {
-      "match": "^\\s*([A-Z_0-9]+)([a-z]*)([A-Z_0-9]*)\\s*=",
-      "captures": {
-        "1": {
-          "name": "entity.variable.name.m"
-        },
-        "2": {
-          "name": "keyword.parameter.m"
-        },
-        "3": {
-          "name": "entity.variable.name.m"
-        }
-      }
+      "match": "\\b(multimax|modulo)\\b",
+      "name": "entity.name.function.m"
     },
     {
-      "name": "string.quoted.double.m",
-      "begin": "RANDOMFUZZERTEST",
+      "match": "\\b(nb_categorie|nb_erreur|numero_compl|numero_verif|taille)\\b",
+      "name": "entity.name.function.m"
+    },
+    {
+      "name": "comment.line.m",
+      "begin": "#",
       "end": "$"
     },
     {
-      "match": "^\\s*([A-Z_0-9]+)\\s*\\:",
-      "captures": {
-        "1": {
-          "name": "storage.declaration.m"
-        }
-      }
+      "name": "comment.block.m",
+      "begin": "#\\{",
+      "end": "\\}#"
     },
     {
-      "match": "\\b([A-Z_0-9]+)([a-z]*)([A-Z_0-9]*)\\b",
-      "captures": {
-        "2": {
-          "name": "keyword.parameter.m"
-        }
-      }
-    },
-    {
-      "match": "\\*",
+      "match": "\\b(\\+|\\-|\\*|\\|\\=|!\\=|\\>|\\<|\\>\\=|\\<\\=|et|ou|non|dans)\\b",
       "name": "keyword.operator.m"
     },
     {
-      "match": "\\+",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "\\/",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "\\^",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "\\-",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "et",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "ou",
-      "name": "keyword.operator.m"
-    },
-    {
-      "match": "regle",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "verif",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "application",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "enchaineur",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "alias",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "type",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "si",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "alors",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "sinon",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "finsi",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "pour",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "calculee",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "saisie",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "const",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "condition",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "sortie",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "restituee",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "arr",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "inf",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "positif_ou_nul",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "positif",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "present",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "multimax",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "null",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "max",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "min",
-      "name": "entity.name.function.m"
-    },
-    {
-      "match": "somme",
-      "name": "entity.name.function.m"
+      "match": "\\b([A-Z0-9]*)[A-Z]([A-Z0-9_]*)\\b",
+      "name": "entity.name.variable.m"
     }
   ]
 }
