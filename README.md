@@ -9,6 +9,6 @@ VSCode and vim syntax highlighting for DGFiP's M language. Useful for browsing t
  ## vim
 
  (For Unix-based systems) 
- Create a directory ~/.vim/syntax and move the file mdgfip.vim there 
- Create a directory ~/.vim/ftdetect and create a file mdgfip.vim there containing a single line: 
+ - Create a directory ~/.vim/syntax and move the file mdgfip.vim there 
+ - Create a directory ~/.vim/ftdetect and create a file mdgfip.vim there containing a single line: 
 `au BufRead,BufNewFile *.m set filetype=mdgfip`
