@@ -7,10 +7,12 @@
   "patterns": [
     {
       "match": "\\bvariable\\s+(saisie|calculee)\\b",
+      "vim_name": "structKeywords",
       "name": "entity.name.type.m"
     },
     {
       "match": "\\bdomaine\\s+(regle|verif)\\b",
+      "vim_name": "structKeywords",
       "name": "entity.name.type.m"
     },
     {
@@ -19,98 +21,116 @@
     },
     {
       "match": "\\bcalculer\\s+(domaine|enchaineur|cible)\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\bverifier\\s+domaine\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\:|\\(|\\)|\\,|\\;",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\bvariable\\s+temporaire\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\b(application|enchaineur|tableau|attribut)\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\b(specialise|autorise|par_defaut|calculable|verifiable)\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\b(saisie|calculee|alias|base|restituee|type|fonction|const|sortie|condition)\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\b(erreur|afficher_erreur|leve_erreur|nettoie_erreurs)\\b",
+      "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
       "match": "\\b(si|alors|sinon|sinon_si|finsi|pour|un|iterer|avec|restaurer|apres|categorie)\\b",
-      "name": "keyword.control.m"
-    },
-    {
-      "match": "\\b(erreur|afficher_erreur|leve_erreur|nettoie_erreurs)\\b",
+      "vim_name": "controlKeywords",
       "name": "keyword.control.m"
     },
     {
       "match": ":\\s*variable",
+      "vim_name": "controlKeywords",
       "name": "keyword.control.m"
     },
     {
       "begin": "\\\"",
       "end": "\\\"",
+      "vim_name": "strings",
       "name": "string.quoted.double.m"
     },
     {
       "match": "^\\s*([A-Z_a-z_0-9]+)[A-Z_a-z]([A-Z_a-z_0-9]*)\\s*\\=aaaaaaaaaaaaaaaaaaaaaaaaaa",
       "comment": "deactivated because of conflicts with equality test",
+      "vim_name": "assignment",
       "name": "entity.name.type.m"
     },
     {
       "match": "^\\s*([A-Z_a-z_0-9]*)[A-Z]([A-Z_a-z_0-9]*)\\s*\\:",
+      "vim_name": "declaration",
       "name": "entity.name.type.m"
     },
     {
       "match": "\\b([0-9]+)(\\(\\.[0-9]+\\))?\\b",
+      "vim_name": "numericConstant",
       "name": "constant.numeric.m"
     },
     {
       "match": "\\bindefini\\b",
+      "vim_name": "numericConstant",
       "name": "constant.numeric.m"
     },
     {
       "match": "\\b(somme|abs|min|max|positif|positif_ou_nul|null|arr|inf|supzero|present)\\b",
+      "vim_name": "functions",
       "name": "entity.name.function.m"
     },
     {
       "match": "\\b(multimax|modulo)\\b",
+      "vim_name": "functions",
       "name": "entity.name.function.m"
     },
     {
       "match": "\\b(nb_categorie|nb_erreur|numero_compl|numero_verif|taille)\\b",
+      "vim_name": "functions",
       "name": "entity.name.function.m"
     },
     {
+      "vim_name": "comments",
       "name": "comment.line.m",
       "begin": "#",
       "end": "$"
     },
     {
       "name": "comment.block.m",
+      "vim_name": "comments",
       "begin": "#\\{",
       "end": "\\}#"
     },
     {
       "match": "\\b(\\+|\\-|\\*|\\|\\=|!\\=|\\>|\\<|\\>\\=|\\<\\=|et|ou|non|dans)\\b",
+      "vim_name": "operators",
       "name": "keyword.operator.m"
     },
     {
       "match": "\\b([A-Z0-9]*)[A-Z]([A-Z0-9_]*)\\b",
+      "vim_name": "operators",
       "name": "entity.name.variable.m"
     }
   ]
