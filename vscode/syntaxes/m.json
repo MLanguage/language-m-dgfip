@@ -42,7 +42,7 @@
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(saisie|calculee|alias|base|restituee|type|fonction|const|sortie)\\b",
+      "match": "\\b(saisie|calculee|alias|base|restituee|type|fonction|const|sortie|condition)\\b",
       "name": "keyword.other.m"
     },
     {
@@ -50,7 +50,7 @@
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(si|alors|sinon|finsi|pour|un|iterer|avec|restaurer|apres|categorie)\\b",
+      "match": "\\b(si|alors|sinon|sinon_si|finsi|pour|un|iterer|avec|restaurer|apres|categorie)\\b",
       "name": "keyword.control.m"
     },
     {

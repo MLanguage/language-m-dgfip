@@ -28,9 +28,9 @@ syntax match basicKeywords "\<variable\s\+temporaire\>"
 syntax keyword basicKeywords application enchaineur tableau attribut
 syntax keyword basicKeywords specialise autorise par_defaut calculable verifiable
 syntax keyword basicKeywords saisie calculee alias base restituee type fonction const sortie condition
-syntax keyword basicKeywords erreur afficher_afficher_erreur leve_erreur nettoie_erreurs
+syntax keyword basicKeywords erreur afficher_erreur leve_erreur nettoie_erreurs
 
-syntax keyword controlKeywords si alors sinon finsi pour un iterer avec restaurer apres categorie
+syntax keyword controlKeywords si alors sinon sinon_si finsi pour un iterer avec restaurer apres categorie
 syntax match controlKeywords ':\s*variable'
 
 "syntax match loopParameter '\<[a-z]\>'
