@@ -25,12 +25,15 @@ syntax match basicKeywords ')'
 syntax match basicKeywords ','
 syntax match basicKeywords ';'
 syntax match basicKeywords "\<variable\s\+temporaire\>"
-syntax keyword basicKeywords application enchaineur tableau attribut
-syntax keyword basicKeywords specialise autorise par_defaut calculable verifiable
-syntax keyword basicKeywords saisie calculee alias base restituee type fonction const sortie condition
-syntax keyword basicKeywords erreur afficher_erreur leve_erreur nettoie_erreurs
+syntax keyword basicKeywords application enchaineur tableau attribut specialise
+syntax keyword basicKeywords autorise par_defaut calculable verifiable saisie
+syntax keyword basicKeywords calculee alias base restituee type fonction const
+syntax keyword basicKeywords sortie condition erreur afficher afficher_erreur
+syntax keyword basicKeywords leve_erreur nettoie_erreurs finalise_erreurs
+syntax keyword basicKeywords exporte_erreurs
 
-syntax keyword controlKeywords si alors sinon sinon_si finsi pour un iterer avec restaurer apres categorie
+syntax keyword controlKeywords si alors sinon_si sinon finsi
+syntax keyword controlKeywords pour un iterer avec restaurer apres categorie
 syntax match controlKeywords ':\s*variable'
 
 "syntax match loopParameter '\<[a-z]\>'
@@ -43,9 +46,10 @@ syntax match declaration '^\s*[A-Z0-9_]*[A-Z][A-Z0-9_]*\s*:'
 syntax match numericConstant '\<[0-9]\+\(\.[0-9]\+\)\?\>'
 syntax keyword numericConstant indefini
 
-syntax keyword functions somme abs min max positif positif_ou_nul null arr inf supzero present
-syntax keyword functions multimax modulo
-syntax keyword functions nb_categorie nb_erreur numero_compl numero_verif taille
+syntax keyword functions somme abs min max positif positif_ou_nul null arr inf
+syntax keyword functions supzero present multimax modulo nb_anomalies
+syntax keyword functions nb_discordances nb_informatives nb_bloquantes
+syntax keyword functions nb_categorie numero_compl numero_verif taille
 
 syntax match comments "\#.*$"
 syntax region comments start='#{' end='}#'
