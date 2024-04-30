@@ -40,27 +40,37 @@
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(application|enchaineur|tableau|attribut)\\b",
+      "match": "\\b(application|enchaineur|tableau|attribut|specialise)\\b",
       "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(specialise|autorise|par_defaut|calculable|verifiable)\\b",
+      "match": "\\b(autorise|par_defaut|calculable|verifiable|saisie)\\b",
       "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(saisie|calculee|alias|base|restituee|type|fonction|const|sortie|condition)\\b",
+      "match": "\\b(calculee|alias|base|restituee|type|fonction|const)\\b",
       "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(erreur|afficher_erreur|leve_erreur|nettoie_erreurs)\\b",
+      "match": "\\b(sortie|condition|erreur|afficher|afficher_erreur)\\b",
       "vim_name": "basicKeywords",
       "name": "keyword.other.m"
     },
     {
-      "match": "\\b(si|alors|sinon|sinon_si|finsi|pour|un|iterer|avec|restaurer|apres|categorie)\\b",
+      "match": "\\b(leve_erreur|nettoie_erreurs|finalise_erreurs|exporte_erreurs)\\b",
+      "vim_name": "basicKeywords",
+      "name": "keyword.other.m"
+    },
+    {
+      "match": "\\b(si|alors|sinon|sinon_si|finsi)\\b",
+      "vim_name": "controlKeywords",
+      "name": "keyword.control.m"
+    },
+    {
+      "match": "\\b(pour|un|iterer|avec|restaurer|apres|categorie)\\b",
       "vim_name": "controlKeywords",
       "name": "keyword.control.m"
     },
@@ -97,17 +107,22 @@
       "name": "constant.numeric.m"
     },
     {
-      "match": "\\b(somme|abs|min|max|positif|positif_ou_nul|null|arr|inf|supzero|present)\\b",
+      "match": "\\b(somme|abs|min|max|positif|positif_ou_nul|null|arr|inf)\\b",
       "vim_name": "functions",
       "name": "entity.name.function.m"
     },
     {
-      "match": "\\b(multimax|modulo)\\b",
+      "match": "\\b(supzero|present|multimax|modulo|nb_anomalies)\\b",
       "vim_name": "functions",
       "name": "entity.name.function.m"
     },
     {
-      "match": "\\b(nb_categorie|nb_erreur|numero_compl|numero_verif|taille)\\b",
+      "match": "\\b(nb_discordances|nb_informatives|nb_bloquantes)\\b",
+      "vim_name": "functions",
+      "name": "entity.name.function.m"
+    },
+    {
+      "match": "\\b(nb_categorie|numero_compl|numero_verif|taille)\\b",
       "vim_name": "functions",
       "name": "entity.name.function.m"
     },
