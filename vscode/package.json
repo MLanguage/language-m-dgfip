@@ -20,7 +20,8 @@
 				"extensions": [
 					".m",
 					".m_spec",
-					".m_test"
+					".m_test",
+					"irj"
 				],
 				"configuration": "./language-configuration.json",
 				"icon": {
