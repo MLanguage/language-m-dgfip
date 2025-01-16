@@ -13,7 +13,10 @@ syntax match structKeywords '\<variable\s\+saisie\>'
 syntax match structKeywords "\<variable\s\+calculee\>"
 syntax match structKeywords '\<domaine\s\+regle\>'
 syntax match structKeywords "\<domaine\s\+verif\>"
-syntax keyword structKeywords regle verif cible
+syntax keyword structKeywords fonction regle verif cible
+
+syntax match aliasKw 'alias' contains=basicKeywords
+syntax keyword basicKeywords alias contained
 
 syntax match basicKeywords "\<calculer\s\+domaine\>"
 syntax match basicKeywords "\<calculer\s\+enchaineur\>"
@@ -27,10 +30,11 @@ syntax match basicKeywords ';'
 syntax match basicKeywords "\<variable\s\+temporaire\>"
 syntax keyword basicKeywords application enchaineur tableau attribut specialise
 syntax keyword basicKeywords autorise par_defaut calculable verifiable saisie
-syntax keyword basicKeywords calculee alias base restituee type fonction const
-syntax keyword basicKeywords sortie condition erreur afficher afficher_erreur
-syntax keyword basicKeywords leve_erreur nettoie_erreurs finalise_erreurs
-syntax keyword basicKeywords exporte_erreurs
+syntax keyword basicKeywords calculee base restituee type const argument
+syntax keyword basicKeywords resultat sortie condition erreur afficher
+syntax keyword basicKeywords afficher_erreur leve_erreur nettoie_erreurs
+syntax keyword basicKeywords finalise_erreurs exporte_erreurs quand faire
+syntax keyword basicKeywords puis_quand sinon_faire finquand neant increment
 
 syntax keyword controlKeywords si alors sinon_si sinon finsi
 syntax keyword controlKeywords pour un iterer avec restaurer apres categorie
@@ -50,6 +54,10 @@ syntax keyword functions somme abs min max positif positif_ou_nul null arr inf
 syntax keyword functions supzero present multimax modulo nb_anomalies
 syntax keyword functions nb_discordances nb_informatives nb_bloquantes
 syntax keyword functions nb_categorie numero_compl numero_verif taille
+syntax keyword functions indenter nom
+
+syntax match funArgs "[a-z]\+([^)]*)" contains=functions
+syntax keyword functions alias contained
 
 syntax match comments "\#.*$"
 syntax region comments start='#{' end='}#'
@@ -74,6 +82,7 @@ hi def link basicKeywords Keyword
 hi def link controlKeywords Statement
 hi def link operators Operator
 hi def link functions Function
+hi def link functions2 Function
 hi def link comments Comment
 hi def link strings String
 hi def link numericConstant Number
