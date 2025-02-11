@@ -28,16 +28,19 @@ syntax match basicKeywords ')'
 syntax match basicKeywords ','
 syntax match basicKeywords ';'
 syntax match basicKeywords "\<variable\s\+temporaire\>"
-syntax keyword basicKeywords application enchaineur tableau attribut specialise
+syntax keyword basicKeywords application enchaineur tableau specialise
 syntax keyword basicKeywords autorise par_defaut calculable verifiable saisie
-syntax keyword basicKeywords calculee base restituee type const argument
-syntax keyword basicKeywords resultat sortie condition erreur afficher
-syntax keyword basicKeywords afficher_erreur leve_erreur nettoie_erreurs
-syntax keyword basicKeywords finalise_erreurs exporte_erreurs quand faire
-syntax keyword basicKeywords puis_quand sinon_faire finquand neant increment
+syntax keyword basicKeywords calculee base restituee type const arguments
+syntax keyword basicKeywords variables_temporaires arguments resultat sortie
+syntax keyword basicKeywords condition erreur afficher afficher_erreur
+syntax keyword basicKeywords leve_erreur nettoie_erreurs finalise_erreurs
+syntax keyword basicKeywords exporte_erreurs quand faire puis_quand sinon_faire
+syntax keyword basicKeywords finquand neant increment variables evenements
+syntax keyword basicKeywords evenement ajouter reference
 
 syntax keyword controlKeywords si alors sinon_si sinon finsi
 syntax keyword controlKeywords pour un iterer avec restaurer apres categorie
+syntax keyword controlKeywords arranger_evenements trier filtrer
 syntax match controlKeywords ':\s*variable'
 
 "syntax match loopParameter '\<[a-z]\>'
@@ -54,7 +57,7 @@ syntax keyword functions somme abs min max positif positif_ou_nul null arr inf
 syntax keyword functions supzero present multimax modulo nb_anomalies
 syntax keyword functions nb_discordances nb_informatives nb_bloquantes
 syntax keyword functions nb_categorie numero_compl numero_verif taille
-syntax keyword functions indenter nom
+syntax keyword functions indenter nom nb_evenements champ_evenement attribut
 
 syntax match funArgs "[a-z]\+([^)]*)" contains=functions
 syntax keyword functions alias contained
@@ -66,6 +69,7 @@ syntax match operators '+'
 syntax match operators '-'
 syntax match operators '*'
 syntax match operators '/'
+syntax match operators '%'
 syntax match operators '='
 syntax match operators '!='
 syntax match operators '>'
