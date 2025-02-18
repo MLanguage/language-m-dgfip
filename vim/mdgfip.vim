@@ -27,7 +27,6 @@ syntax match basicKeywords '('
 syntax match basicKeywords ')'
 syntax match basicKeywords ','
 syntax match basicKeywords ';'
-syntax match basicKeywords "\<variable\s\+temporaire\>"
 syntax keyword basicKeywords application enchaineur tableau specialise
 syntax keyword basicKeywords autorise par_defaut calculable verifiable saisie
 syntax keyword basicKeywords calculee base restituee type const arguments
