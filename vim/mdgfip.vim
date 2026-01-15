@@ -1,7 +1,6 @@
-" Vim syntax file
-" Language: DGFiP's M language
-" Maintainer: Denis Merigoux
-" Latest Revision: 21 November 2023
+" Fichier de syntaxe Vim
+" Language: langage M, DGFiP
+" Latest Revision: 15 janvier 2026
 
 if exists("b:current_syntax")
   finish
@@ -33,14 +32,14 @@ syntax keyword basicKeywords calculee base restituee type const arguments
 syntax keyword basicKeywords variables_temporaires arguments resultat sortie
 syntax keyword basicKeywords condition erreur espace_variables
 
-syntax keyword controlKeywords si alors sinon_si sinon finsi
+syntax keyword controlKeywords si alors sinon_si sinon finsi aiguillage cas
 syntax keyword controlKeywords pour un iterer avec restaurer apres categorie
 syntax keyword controlKeywords arranger_evenements trier filtrer afficher
 syntax keyword controlKeywords afficher_erreur leve_erreur nettoie_erreurs
 syntax keyword controlKeywords finalise_erreurs exporte_erreurs quand faire
 syntax keyword controlKeywords puis_quand sinon_faire finquand neant increment
 syntax keyword controlKeywords evenements ajouter reference variables espace
-syntax keyword controlKeywords entre
+syntax keyword controlKeywords entre evenement stop nettoie_erreurs_finalisees
 syntax match controlKeywords ':\s*variable'
 
 "syntax match loopParameter '\<[a-z]\>'
@@ -58,6 +57,7 @@ syntax keyword functions supzero present multimax modulo nb_anomalies
 syntax keyword functions nb_discordances nb_informatives nb_bloquantes
 syntax keyword functions nb_categorie numero_compl numero_verif taille
 syntax keyword functions indenter nom nb_evenements champ_evenement attribut
+syntax keyword functions dans_domaine
 
 syntax match funArgs "[a-z]\+([^)]*)" contains=functions
 syntax keyword functions alias contained
